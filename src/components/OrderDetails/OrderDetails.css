@@ -1,0 +1,404 @@
+.MoreInfoClientDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.232);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+  }
+.InfoClientAlert{
+    width: 1000px;
+    height: fit-content;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 12px 0px rgba(28, 28, 28, 0.247);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.bannerInfoClient{
+    display: flex;
+    width: 100%;
+}
+.infoClientImgName{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid #b3b3b3;
+    padding: 1rem;
+}
+.infoClientImgName .imgClient{
+    width: 100%;
+}
+.infoClientImgName h2{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #2D2E32;
+}
+.infoClientImgName .firstSpan{
+    font-family: Poppins,sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: rgb(67, 67, 67);
+}
+.infoClientImgName .secondSpan{
+    font-family: Poppins,sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: rgb(67, 67, 67);
+    font-weight: 600;
+}
+.InfoClientPerso{
+    width: 70%;
+}
+.infoClinetRw1Hist{
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid #b3b3b3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.infoClinetRw1Hist h3{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #2D2E32;
+}
+.divPersInfoDf{
+    display: flex;
+    width: 100%;
+}
+.divCl1{
+    width: 33.33%;
+    display: grid;
+    gap: 5px;
+}
+.divCl1 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl1 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.divCl2{
+    width: 33.33%;
+    display: grid;
+    gap: 5px;
+}
+.divCl2 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl2 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.divCl3{
+    width: 33.33%;
+    display: grid;
+    gap: 5px;
+}
+.divCl3 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl3 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.infoClinetRw2Hist{
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid #b3b3b3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.infoClinetRw2Hist h3{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #2D2E32;
+}
+.divPersInfoDf2{
+    width: 100%;
+    display: grid;
+    gap: 15px;
+}
+.persoInfo1rw{
+    width: 100%;
+    display: flex;
+}
+.divCl1Rw1{
+    display: grid;
+    width: 50%;
+    gap: 5px;
+}
+.divCl1Rw1 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl1Rw1 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.divCl2Rw1{
+    display: grid;
+    width: 33.33%;
+    gap: 5px;
+}
+.divCl2Rw1 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl2Rw1 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.divCl3Rw1{
+    display: grid;
+    width: 33.33%;
+    gap: 5px;
+}
+.divCl3Rw1 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl3Rw1 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.persoInfo2rw{
+    width: 100%;
+    display: flex;
+}
+.divCl1Rw2{
+    display: grid;
+    width: 33.33%;
+    gap: 5px;
+}
+.divCl1Rw2 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.divCl1Rw2 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.divCl2Rw2{
+    display: grid;
+    width: 33.33%;
+    gap: 5px;
+}
+.divCl2Rw2 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl2Rw2 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+
+.infoClinetRw3Hist{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.infoClinetRw3Hist h3{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #2D2E32;
+}
+.clientPointAndVistes{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+.PointAndVisitescl1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33.33%;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+}
+.firstOne{
+    display: grid;
+}
+.firstOne span{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    color: #29345C;
+    font-weight: 600;
+}
+.firstOne span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.firstOneSvg{
+    background-color:#29345C;
+    padding: 0.75rem 0.75rem;
+    border-radius: 5px;
+}
+.firstOneSvg svg{
+    stroke: white;
+}
+.PointAndVisitescl2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33.33%;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+}
+.secondOne{
+    display: grid;
+}
+.secondOne span{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    color: #2D2E32;
+    font-weight: 600;
+}
+.secondOne span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.secondOneSvg{
+    background-color:#2D2E32;
+    padding: 0.75rem 0.75rem;
+    border-radius: 5px;
+}
+.secondOneSvg svg{
+    stroke: white;
+}
+.PointAndVisitescl3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33.33%;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+}
+.thirdOne{
+    display: grid;
+}
+.thirdOne span{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    color: rgb(56, 199, 31);
+    font-weight: 600;
+}
+.thirdOne span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.thirdOneSvg{
+    background-color:rgb(56, 199, 31);
+    padding: 0.75rem 0.75rem;
+    border-radius: 5px;
+}
+.thirdOneSvg svg{
+    fill: white;
+    stroke: white;
+}
+
+.CloseIcon{
+    position: relative;
+    right: 0;
+    background-color: black;
+}
+.CloseIcon svg{
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    stroke: #2D2E32;
+    cursor: pointer;
+}

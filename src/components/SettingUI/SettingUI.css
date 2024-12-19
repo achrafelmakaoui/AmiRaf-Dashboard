@@ -1,0 +1,369 @@
+
+.SettingUI{
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+}
+.headerSettingIcons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 1.75rem;
+    gap: 10px;
+}
+
+.bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: #2D2E32;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.SettingContent{
+  width: 100%;
+  margin-top: 1.5rem;
+  border: 1px solid #b3b3b3;
+  border-radius: 10px;
+  height: fit-content;
+  padding: 0.85rem 1.85rem;
+}
+.SettingContent h2{
+  font-family: Poppins,sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #2D2E32;
+}
+.firstBannerProfilInfo{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border: 1px solid #b3b3b3;
+  padding: 0.85rem;
+  border-radius: 5px;
+}
+.prInfoIdentity{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.IdentityImg img{
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  background-color: #2D2E32;
+  border-radius: 50%;
+}
+.IdentityCredentils{
+  display: grid;
+  gap: 3px;
+}
+.IdentityCredentils .span1{
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #2D2E32;
+}
+.IdentityCredentils .span2{
+  font-family: Poppins,sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #2D2E32;
+}
+.editBtnProfilInfo{
+  display: flex;
+}
+.editBtnProfilInfo button{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #b3b3b3;
+  height:35px;
+  padding: 0rem 0.55rem;
+  border-radius: 5px;
+  font-family: Poppins,sans-serif;
+  font-size: 0.90rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.editBtnProfilInfo button:hover{
+  border: 1px solid #2D2E32d8;
+  background-color: #2D2E32;
+  color: white;
+  stroke: white;
+}
+
+.secondBannerProfilInfo{
+  display: grid;
+  margin-top: 1.25rem;
+  border: 1px solid #b3b3b3;
+  padding: 0.85rem;
+  border-radius: 5px;
+  gap: 10px;
+}
+.prInfoRW1{
+  display: flex;
+  justify-content: space-between;
+}
+.persoInfoDiv h3{
+  font-family: Poppins,sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #2D2E32;
+}
+.prInfoRW2{
+  width: 100%;
+  display: flex;
+  align-items: start;
+}
+.prInfoClm1{
+  display: grid;
+  gap: 15px;
+  width: 30%;
+}
+.prInfoClm1Rw1{
+  display: grid;
+  gap: 10px;
+}
+.prInfoClm1Rw1 span{
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 600;
+}
+.prInfoClm1Rw1 span:nth-child(1){
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 400;
+}
+.prInfoClm1Rw2{
+  display: grid;
+  gap: 10px;
+}
+.prInfoClm1Rw2 span{
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 600;
+}
+.prInfoClm1Rw2 span:nth-child(1){
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 400;
+}
+.prInfoClm1Rw3{
+  display: grid;
+  gap: 10px;
+}
+.prInfoClm1Rw3 span{
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 600;
+}
+.prInfoClm1Rw3 span:nth-child(1){
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 400;
+}
+.prInfoClm2{
+  display: grid;
+  gap: 15px;
+}
+.prInfoClm2Rw1{
+  display: grid;
+  gap: 10px;
+}
+.prInfoClm2Rw1 span{
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 600;
+}
+.prInfoClm2Rw1 span:nth-child(1){
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 400;
+}
+.prInfoClm2Rw2{
+  display: grid;
+  gap: 10px;
+}
+.prInfoClm2Rw2 span{
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 600;
+}
+.prInfoClm2Rw2 span:nth-child(1){
+  font-family: Poppins,sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: rgb(75, 75, 75);
+  font-weight: 400;
+}
+
+.thirdBannerProfilInfo{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  border: 1px solid #b3b3b3;
+  padding: 0.85rem;
+  border-radius: 5px;
+}
+.DeleteDivBnr{
+  display: grid;
+}
+.DeleteDivBnr h3{
+  font-family: Poppins,sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #2D2E32;
+  margin-bottom: 15px;
+}
+.DeleteDivBnr span{
+  font-family: Poppins,sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: rgb(75, 75, 75);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.DeleteDivBnr span svg{
+  stroke: #2D2E32;
+  margin-right: 5px;
+}
+.DeleteDivBtn button{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #2D2E32;
+  color: #2D2E32;
+  height:35px;
+  padding: 0rem 0.55rem;
+  border-radius: 5px;
+  font-family: Poppins,sans-serif;
+  font-size: 0.90rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.DeleteDivBtn button:hover{
+  background-color: #2D2E32;
+  color: white;
+}
+.settingBannerQuestion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.232);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+}
+.settingAskYesOrNo{
+  width: fit-content;
+  height: fit-content;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 12px 0px rgba(28, 28, 28, 0.247);
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1.25rem;
+}
+.divDelRw1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #2D2E32;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.divDelRw1 svg{
+  stroke: white;
+}
+
+.divDelRw2 h3{
+  font-family: Poppins,sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #2D2E32;
+}
+.divDelRw3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.divDelRw3 button{
+  background-color: #2D2E32;
+  height: 35px;
+  width: 120px;
+  border-radius: 5px;
+  color: white;
+  font-family: Poppins,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #2D2E32;
+  cursor: pointer;
+}
+.divDelRw3 button:nth-child(1){
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  color: gray;
+  height: 35px;
+  width: 120px;
+  border-radius: 5px;
+  font-family: Poppins,sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 915px){
+  .prInfoRW2{
+    width: 100%;
+    display: flex;
+    align-items: start;
+  }
+  .prInfoClm1{
+    display: grid;
+    gap: 15px;
+    width: 50%;
+  }
+  .prInfoClm2{
+    display: grid;
+    gap: 15px;
+    width: 50%;
+  }
+}

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.sidebar {
+  position: relative;
+  width: 256px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 30px;
+  transition: all 0.3s;
+  border-right: 1px solid #f6f6f6;
+
+}
+.sidebar .head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f6f6f6;
+  padding-left: 8px;
+}
+.user-img {
+  width: 45px;
+}
+.user-img img {
+  width: 100%;
+}
+.user-details .title{
+  font-size: 10px;
+  font-weight: 700;
+  color: #2D2E32;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.user-details .name {
+  font-size: 10px;
+  font-weight: 700;
+  color: #2D2E32;
+}
+.nav {
+  flex: 1;
+}
+.menu ul li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.menu ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2E32;
+  text-decoration: none;
+  padding: 12px 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.menu ul li > a:hover,
+.menu ul li.active > a {
+  color: #F5F5F5;
+  background-color: #2D2E32;
+}
+.menu:not(:last-child) {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f6f6f6;
+}

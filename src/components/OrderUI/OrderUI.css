@@ -1,0 +1,374 @@
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2D2E32;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2D2E32;
+}
+
+.transactionUI{
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+}
+.headertransactionIcons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 1.75rem;
+    gap: 10px;
+}
+.bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: #2D2E32d9;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.transactionTable{
+  width: 100%;
+  margin-top: 1.5rem;
+  border: 1px solid #b3b3b3;
+  border-radius: 8px;
+  height: fit-content;
+}
+.filterTransactions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.85rem 0rem;
+  border-bottom: 1px solid #b3b3b3;
+  column-gap: 20px;
+}
+.search-transaction{
+  padding-left: 1rem;
+  width: 20%;
+}
+.serachByNumeroBon{
+  width: 100%;
+}
+.search-transaction input{
+  background: transparent;
+  border: 1px solid #b3b3b3;
+  padding: 0.4rem 0.2rem 0.4rem 1rem;
+  border-radius: 8px;
+  transition: 1s;
+  color: #515151;
+  font-family: Poppins,sans-serif;
+  width: 100%;
+}
+.search-transaction input:focus{
+  outline: none;
+  border: 1px solid #2D2E32;
+  transition: 1s;
+}
+.transactionFilterMois{
+  width: 20%;
+}
+.transactionFilterMoisSel{
+  width: 100%;
+}
+.transactionFilterMoisSel select{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  cursor: pointer;
+  color: #515151;
+  width: 100%;
+
+}
+.transactionFilterMoisSel select option{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+  
+.transactionFilterJour{
+  width: 20%;
+}
+.transactionFilterJourSel{
+  width: 100%;
+}
+.transactionFilterJourSel select{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  cursor: pointer;
+  color: #515151;
+  width: 100%;
+
+}
+.transactionFilterJourSel select option{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.transactionFilterStatus{
+  width: 20%;
+}
+.transactionFilterStatusSel{
+  width: 100%;
+}
+.transactionFilterStatusSel select{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  cursor: pointer;
+  width: 100%;
+  color: #515151;
+}
+.transactionFilterStatusSel select option{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.transactionFilterStation{
+  padding-right: 1rem;
+  width: 20%;
+}
+.transactionFilterStationInp{
+  width: 100%;
+}
+.transactionFilterStationInp input{
+  background: transparent;
+  border: 1px solid #b3b3b3;
+  padding: 0.4rem 0.2rem 0.4rem 1rem;
+  border-radius: 8px;
+  transition: 1s;
+  color: #515151;
+  font-family: Poppins,sans-serif;
+  width: 100%;
+}
+.transactionFilterStationInp input:focus{
+  outline: none;
+  border: 1px solid #2D2E32;
+  transition: 1s;
+}
+
+.TransactionTableDs{
+  max-height: 512px;
+  overflow-y: scroll;
+
+}
+.tableTrans{
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+  text-align: left;
+  border: none;
+}
+.tableTrans tr{
+  border-bottom: 1px solid #b3b3b3;
+  overflow-y: scroll;
+}
+.tableTrans tr:nth-last-child(1){
+  border-bottom: none;
+}
+.trHead th{
+  background-color: rgba(69, 168, 255, 0.663);
+  padding: 0.85rem 0rem;
+  font-family: Poppins,sans-serif;
+  color: white;
+}
+.trHead th:nth-child(1){
+  padding-left: 1rem;
+}
+.transactionOwner{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.transactionOwner-Img{
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.transactionOwner-Name{
+  font-family: Poppins,sans-serif;
+  font-size: 16px;
+  color: #0b0b0b;
+  font-weight: 500;
+  padding: 0;
+}
+.transactionOwner-Job{
+  font-family: Poppins,sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #29345C;
+  padding: 0;
+}
+.tableTrans tr td{
+  font-family: Poppins,sans-serif;
+  padding: 0.4rem 0rem;
+}
+.tableTrans tr td:nth-child(1){
+  padding-left: 1rem;
+}
+.tableTrans tr td span{
+  font-family: Poppins,sans-serif;
+}
+.transactionOwner-Info{
+  display: grid;
+}
+
+.statusATT{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: rgba(69, 168, 255, 0.663);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusATT span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+.statusCNF{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: rgba(2, 255, 65, 0.663);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusCNF span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+.statusCNF-N{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: rgba(255, 2, 2, 0.663);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusCNF-N span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+.statusREF{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: rgb(255, 2, 2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusREF span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+.statusRTR{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: rgba(40, 39, 39, 0.551);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusRTR span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+.statusLVR{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: rgb(32, 243, 28);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusLVR span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+.ActionsInfo{
+  display: flex;
+  gap: 10px;
+}
+.ActionDelIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: #ff0800d9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ActionUpdIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: #0055ffd9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ActionMoreInfoIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  background-color: #00a2ffd9;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,225 @@
+.ProductDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.232);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+  }
+.ProductDetailsAlert{
+    width: 1000px;
+    height: fit-content;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 12px 0px rgba(28, 28, 28, 0.247);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bannerProductDetails{
+    display: flex;
+    width: 100%;
+}
+.ProductDetailsImages{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-right: 1px solid #b3b3b3;
+    padding: 1rem;
+}
+.ProductDetailsImgName{
+    width: 100%;
+}
+.ProductDetailsImgName .imgProduit{
+    width: 100%;
+    border-radius: 4px;
+}
+.buttonContainer{
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+}
+.buttonContainer button{
+    height: 40px;
+    border-radius: 4px;
+}
+.ProductDetails-Perso{
+    width: 70%;
+}
+.ProductDetails-row1{
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid #b3b3b3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.ProductDetails-row1 h3{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #2D2E32;
+}
+.ProductDetails-col1{
+    display: flex;
+    width: 100%;
+}
+.ProductDetails-col2{
+    display: flex;
+    width: 100%;
+}
+.ProductDetailsCl1{
+    width: 33.33%;
+    display: grid;
+    gap: 5px;
+}
+.ProductDetailsCl1 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.ProductDetailsCl1 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.ProductDetailsCl2{
+    width: 33.33%;
+    display: grid;
+    gap: 5px;
+}
+.ProductDetailsCl2 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.ProductDetailsCl2 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.ProductDetailsCl3{
+    width: 33.33%;
+    display: grid;
+    gap: 5px;
+}
+.ProductDetailsCl3 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.ProductDetailsCl3 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.ProductDetails-row2{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.ProductDetails-row2 h3{
+    font-family: Poppins,sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #2D2E32;
+}
+.ProductDetails-row{
+    width: 100%;
+    display: flex;
+}
+.ProductDetailsCl1Row{
+    display: grid;
+    width: 100%;
+    gap: 5px;
+}
+.ProductDetailsCl1Row span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+    text-align: justify;
+}
+.ProductDetailsCl1Row span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.divCl2Rw1{
+    display: grid;
+    width: 33.33%;
+    gap: 5px;
+}
+.divCl2Rw1 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl2Rw1 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.divCl3Rw1{
+    display: grid;
+    width: 33.33%;
+    gap: 5px;
+}
+.divCl3Rw1 span{
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+.divCl3Rw1 span:nth-child(1){
+    font-family: Poppins,sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+}
+.CloseIcon{
+    position: relative;
+    right: 0;
+    background-color: black;
+}
+.CloseIcon svg{
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    stroke: #2D2E32;
+    cursor: pointer;
+}

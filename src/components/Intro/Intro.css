@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.intro-section{
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.IntroContainer{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.intro-bar {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+#logo{
+    stroke-width: 1;
+    animation: fill 1s ease forwards 3.1s;
+}
+#logo path:nth-child(1){
+    stroke-dasharray: 846.4480590820312px;
+    stroke-dashoffset: 846.4480590820312px;
+    animation: line-animation 3s ease forwards, fillAnimation 3s ease forwards 3s;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 794.2429809570312px;   
+    stroke-dashoffset: 794.2429809570312px;
+    animation: line-animation 3s ease forwards, fillAnimation 3s ease forwards 3s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 1421.5882568359375px;   
+    stroke-dashoffset: 1421.5882568359375px;
+    animation: line-animation 3s ease forwards, fillAnimation 3s ease forwards 3s;
+}
+
+
+@keyframes line-animation {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fillAnimation {
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: #2D2E32;
+        stroke-width: 0;
+    }
+}

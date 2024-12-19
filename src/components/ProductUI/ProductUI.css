@@ -1,0 +1,471 @@
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2D2E32;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2D2E32;
+}
+
+.ShopUI{
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+}
+.headershopIcons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 1.75rem;
+    gap: 10px;
+}
+.shopBag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: #1edd4b;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: #2D2E32d9;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.shopTable{
+  width: 100%;
+  margin-top: 1.5rem;
+  border: 1px solid #b3b3b3;
+  border-radius: 8px;
+  height: fit-content;
+}
+.filtershop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.85rem 0rem;
+  border-bottom: 1px solid #b3b3b3;
+  column-gap: 20px;
+}
+.search-shop{
+  padding-left: 1rem;
+  width: 20%;
+}
+.serachShoopByNumeroBon{
+  width: 100%;
+}
+.search-shop input{
+  background: transparent;
+  border: 1px solid #b3b3b3;
+  padding: 0.5em 1em 0.5em 2em;
+  border-radius: 8px;
+  transition: 1s;
+  color: #515151;
+  font-family: Poppins,sans-serif;
+}
+.search-shop input:focus{
+  outline: none;
+  border: 1px solid #2D2E32;
+  transition: 1s;
+}
+
+.shopFilterMois{
+  width: 20%;
+}
+.shopFilterMoisSel{
+  width: 100%;
+}
+.shopFilterMoisSel select{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  cursor: pointer;
+  color: #515151;
+  width: 100%;
+
+}
+.shopFilterMoisSel select option{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+  
+.shopFilterJour{
+  width: 20%;
+}
+.shopFilterJourSel{
+  width: 100%;
+}
+.shopFilterJourSel select{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  cursor: pointer;
+  color: #515151;
+  width: 100%;
+
+}
+.shopFilterJourSel select option{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.shopFilterStatus{
+  width: 20%;
+}
+.shopFilterStatusSel{
+  width: 100%;
+}
+.shopFilterStatusSel select{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  cursor: pointer;
+  width: 100%;
+  color: #515151;
+}
+.shopFilterStatusSel select option{
+  font-family: Poppins,sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.shopFilterStation{
+  padding-right: 1rem;
+  width: 20%;
+}
+.shopFilterStationInp{
+  width: 100%;
+}
+.shopFilterStationInp input{
+  background: transparent;
+  border: 1px solid #b3b3b3;
+  padding: 0.4rem 0.2rem 0.4rem 1rem;
+  border-radius: 8px;
+  transition: 1s;
+  color: #515151;
+  font-family: Poppins,sans-serif;
+  width: 100%;
+}
+.shopFilterStationInp input:focus{
+  outline: none;
+  border: 1px solid #2D2E32;
+  transition: 1s;
+}
+
+
+.shopTableDs{
+  max-height: 512px;
+  overflow-y: scroll;
+
+}
+.tableShop{
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+  text-align: left;
+  border: none;
+}
+.tableShop tr{
+  border-bottom: 1px solid #b3b3b3;
+  overflow-y: scroll;
+}
+.tableShop tr:nth-last-child(1){
+  border-bottom: none;
+}
+.trHeadShop th{
+  background-color: #2D2E32;
+  padding: 0.85rem 0rem;
+  font-family: Poppins,sans-serif;
+  color: white;
+}
+.trHeadShop th:nth-child(1){
+  padding-left: 1rem;
+}
+.shopOwner{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.shopOwner-Img{
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.shopOwner-Name{
+  font-family: Poppins,sans-serif;
+  font-size: 16px;
+  color: #0b0b0b;
+  font-weight: 500;
+  padding: 0;
+}
+.shopOwner-Job{
+  font-family: Poppins,sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #29345C;
+  padding: 0;
+}
+.tableShop tr td{
+  font-family: Poppins,sans-serif;
+  padding: 0.4rem 0rem;
+}
+.tableShop tr td:nth-child(1){
+  padding-left: 1rem;
+}
+.tableShop tr td span{
+  font-family: Poppins,sans-serif;
+}
+.shopOwner-Info{
+  display: grid;
+}
+.ActionsInfo{
+  display: flex;
+  gap: 10px;
+}
+.ActionDelIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: #ff0800d9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ActionUpdIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: #0055ffd9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ActionMoreInfoIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  background-color: #00a2ffd9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.statusIS{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: #1edd4b;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusIS span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+.statusOS{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  background-color: #ff0800d9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #2D2E32;
+}
+.statusOS span{
+  font-family: Poppins,sans-serif;
+  color: #2D2E32;
+  font-size: 14px;
+}
+@media(max-width: 1189px) {
+  .filtershop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: none;
+
+  }
+  .search-shop{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .shopFilterMois{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .shopFilterJour{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .shopFilterStatus{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .shopFilterStation{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .search-shop input{
+    width: 100%;
+  }
+  table thead{
+      display: none;
+  }
+  table, table tbody, table tr, table td{
+    display: block;
+    width: 100%;
+  }
+  table .trBodyTd{
+    padding-right: 1rem;
+  }
+  table tr{
+    margin-bottom: 10px;
+  }
+  table td{
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+    border-bottom: 1px solid #b3b3b3;
+    /* gap: 10px; */
+  }
+  table td:nth-last-child(1){
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+    border-bottom: none;
+  }
+  table td::before{
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight:bold ;
+    text-align: left;
+    
+  }
+  .shopOwner{
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+    width: 100%;
+    gap: 10px;
+  }
+  .shopOwner-Img{
+    width: 40px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    background-color: rgba(69, 168, 255, 0.663);
+    border-radius: 5px;
+  }
+  .shopOwner-Name{
+    font-family: Poppins,sans-serif;
+    font-size: 16px;
+    color: #0b0b0b;
+    font-weight: 500;
+    padding: 0;
+  }
+  .shopOwner-Job{
+    text-align: start;
+    font-family: Poppins,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #29345C;
+    padding: 0;
+  }
+  .ActionsInfo{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .ActionDelIcon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.9rem;
+      height: 1.9rem;
+      background-color: #ff0800d9;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .ActionUpdIcon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.9rem;
+      height: 1.9rem;
+      background-color: #0055ffd9;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .ActionMoreInfoIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: #00a2ffd9;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .search .icon-search{
+    display: none;
+  }
+}
