@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sidebar.css';
-import AmiRaf from '../Assets/AmirafB.png';
+import AmiRaf from '../Assets/AmiRaf_Black.webp';
 import { Link } from 'react-router-dom';
 // import { useSelector } from 'react-redux';
 

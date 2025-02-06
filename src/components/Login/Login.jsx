@@ -1,6 +1,6 @@
 import React from 'react'
 import './Login.css'
-import Amiraf from '../Assets/AmirafW.png'
+import Amiraf from '../Assets/AmiRaf_Light.webp'
 import logo from '../Assets/login.png'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
