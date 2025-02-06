@@ -42,13 +42,13 @@ const Login = () => {
             <div className='LoginForm'>
                 <form className="formulaire">
                     <div className="textbox">
-                        <input type="text" className='inputLg' onChange={(e) => setEmail(e.target.value)} autoComplete="email" placeholder='Entre Email...'/>
-                        <label>Cin</label>
+                        <input type="text" className='inputLg' id='email' name='email' onChange={(e) => setEmail(e.target.value)} autoComplete="email" placeholder='Entre Email...'/>
+                        <label htmlFor='email'>Email</label>
                         <FontAwesomeIcon icon={faUserShield} className='usr'/>
                     </div>
                     <div className="textbox">
-                        <input type={passwordType} className='inputLg' onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" placeholder='Entre Mot De Passe...'/>
-                        <label>Mot De Passe</label>
+                        <input type={passwordType} className='inputLg' id='password' name='password' onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" placeholder='Entre Mot De Passe...'/>
+                        <label htmlFor='password'>Mot De Passe</label>
                         <FontAwesomeIcon icon={faKey} className='usr'/>
                     </div>
                     <div className='btnbnr'>

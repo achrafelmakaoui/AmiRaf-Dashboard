@@ -11,7 +11,7 @@ const OrderDetails = ({handleClose, itemId, orderId}) => {
     useEffect(() => {
         const getClient = async () => {
           try {
-            const res = await axios.get(`http://localhost:5000/api/order/orders/${orderId}/${itemId}`);
+            const res = await axios.get(`https://server.amiraf.shop/api/order/orders/${orderId}/${itemId}`);
             setOrder(res.data);
             setOrderItem(res.data.items[0] || {});
           } catch(err){
@@ -30,7 +30,7 @@ const OrderDetails = ({handleClose, itemId, orderId}) => {
         >
             <div className='bannerInfoClient'>
                 <div className='infoClientImgName'>
-                    <img className='imgClient' src={`http://localhost:5000${orderItem?.productId?.image1}`}/>
+                    <img className='imgClient' src={`https://server.amiraf.shop${orderItem?.productId?.image1}`}/>
                 </div>
                 <div className='InfoClientPerso'>
                     <div className='infoClinetRw1Hist'>

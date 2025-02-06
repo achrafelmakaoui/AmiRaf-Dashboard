@@ -20,17 +20,17 @@ const OrderStatusChart = () => {
 
   useEffect(() => {
     // Fetch data for order status
-    fetch("http://localhost:5000/api/order/status-distribution")
+    fetch("https://server.amiraf.shop/api/order/status-distribution")
       .then((response) => response.json())
       .then((data) => {
         // Sort the data according to the desired order
         const sortedData = [
-          { status: "LVR", color: "rgb(32, 243, 28)", count: 0 },
-          { status: "RTR", color: "rgba(40, 39, 39, 0.551)", count: 0 },
-          { status: "REF", color: "rgb(255, 2, 2)", count: 0 },
-          { status: "NTW", color: "rgba(255, 2, 2, 0.663)", count: 0 },
-          { status: "CNF", color: "rgba(2, 255, 65, 0.663)", count: 0 },
-          { status: "ATT", color: "rgba(69, 168, 255, 0.663)", count: 0 },
+          { status: "LVR", color: "#2d2e32", count: 0 },
+          { status: "RTR", color: "#2d2e32", count: 0 },
+          { status: "REF", color: "#2d2e32", count: 0 },
+          { status: "NTW", color: "#2d2e32", count: 0 },
+          { status: "CNF", color: "#2d2e32", count: 0 },
+          { status: "ATT", color: "#2d2e32", count: 0 },
         ];
         
         // Fill the counts based on the data received

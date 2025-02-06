@@ -5,7 +5,7 @@ const TotalSalesRevenue = () => {
 
   useEffect(() => {
     // Fetch total sales revenue from the backend
-    fetch("http://localhost:5000/api/order/total-sales-revenue")
+    fetch("https://server.amiraf.shop/api/order/total-sales-revenue")
       .then((response) => response.json())
       .then((data) => {
         setTotalSalesRevenue(data.totalSalesRevenue);

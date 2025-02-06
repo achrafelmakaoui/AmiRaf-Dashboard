@@ -21,7 +21,7 @@ const TopSellingProductsChart = () => {
 
   useEffect(() => {
     // Fetch order data from the backend API
-    fetch("http://localhost:5000/api/order/top-selling-products")
+    fetch("https://server.amiraf.shop/api/order/top-selling-products")
       .then((response) => response.json())
       .then((data) => {
         // Transform the data to fit Chart.js format
@@ -34,8 +34,8 @@ const TopSellingProductsChart = () => {
             {
               label: "Quantity Sold",
               data: quantities, // Y-axis: Quantity of products with status 'LVR'
-              backgroundColor: "rgba(54, 162, 235, 0.6)",
-              borderColor: "rgba(54, 162, 235, 1)",
+              backgroundColor: "#2d2e32",
+              borderColor: "#2d2e32",
               borderWidth: 1,
             },
           ],

@@ -16,7 +16,7 @@ const UpdateOrder = ({handleClose, orderId, itemId, refreshOrders}) => {
     useEffect(() => {
         const getOrder = async () => {
           try {
-            const res = await axios.get(`http://localhost:5000/api/order/orders/${orderId}/${itemId}`);
+            const res = await axios.get(`https://server.amiraf.shop/api/order/orders/${orderId}/${itemId}`);
             setOrder(res.data);
             setOrderItem(res.data.items[0] || {});
           } catch(err){
@@ -39,7 +39,7 @@ const UpdateOrder = ({handleClose, orderId, itemId, refreshOrders}) => {
                 clientPhoneNumber: telephone,
             };
             const response = await axios.put(
-                `http://localhost:5000/api/order/orders/${orderId}/${itemId}`,
+                `https://server.amiraf.shop/api/order/orders/${orderId}/${itemId}`,
                 updatedOrderData
             );
             console.log("Order updated:", response.data);

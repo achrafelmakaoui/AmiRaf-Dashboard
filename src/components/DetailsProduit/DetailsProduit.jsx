@@ -9,7 +9,7 @@ const DetailsProduit = ({handleClose, productId}) => {
     useEffect(() => {
         const getProduct = async () => {
           try {
-            const res = await axios.get(`http://localhost:5000/api/product/find/${productId}/`);
+            const res = await axios.get(`https://server.amiraf.shop/api/product/find/${productId}/`);
             setProduct(res.data);
           } catch(err){
               console.log(err)
@@ -21,7 +21,7 @@ const DetailsProduit = ({handleClose, productId}) => {
     const totalImages = 6;
     const [currentIndex, setCurrentIndex] = useState(1);
     const getImageUrl = (index) => {
-        return `http://localhost:5000${product[`image${index}`]}`;
+        return `https://server.amiraf.shop${product[`image${index}`]}`;
     };
 
     const buttons = Array.from({ length: totalImages }, (_, i) => i + 1);

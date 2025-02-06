@@ -17,7 +17,7 @@ const UpdateProduct = ({handleClose,productId ,refreshProducts}) => {
     useEffect(() => {
         const getShop = async () => {
           try {
-            const res = await axios.get(`http://localhost:5000/api/product/find/${productId}`);
+            const res = await axios.get(`https://server.amiraf.shop/api/product/find/${productId}`);
             setProduct(res.data);
           } catch(err){
               console.log(err)
@@ -38,7 +38,7 @@ const UpdateProduct = ({handleClose,productId ,refreshProducts}) => {
                 quantity:quantity,
             };
     
-            const response = await axios.put(`http://localhost:5000/api/product/${product._id}`, updatedProductData);
+            const response = await axios.put(`https://server.amiraf.shop/api/product/${product._id}`, updatedProductData);
             console.log('Shop updated:', response.data);
     
             setProduct(response.data);

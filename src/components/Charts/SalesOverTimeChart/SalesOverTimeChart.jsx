@@ -23,7 +23,7 @@ const SalesOverTimeChart = () => {
 
   useEffect(() => {
     // Fetch sales data grouped by day
-    fetch("http://localhost:5000/api/order/sales-over-time")
+    fetch("https://server.amiraf.shop/api/order/sales-over-time")
       .then((response) => response.json())
       .then((data) => {
         const dates = data.map((entry) => entry.date);
@@ -35,8 +35,8 @@ const SalesOverTimeChart = () => {
             {
               label: "Total Sales",
               data: sales, // Y-axis: Sales amounts
-              borderColor: "rgba(75, 192, 192, 1)",
-              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "#2d2e32",
+              backgroundColor: "#2d2e32",
               borderWidth: 2,
               tension: 0.4, // Smooth curves
             },

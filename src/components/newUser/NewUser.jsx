@@ -16,7 +16,7 @@ const NewUser = ({handleClose , refreshUsers}) => {
                 email,
                 password,
             };
-            const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+            const response = await axios.post('https://server.amiraf.shop/api/auth/register', formData);
             console.log('User added:', response.data);
             refreshUsers();
             handleClose();
