@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './ProductUI.css'
-import axios from 'axios'
 import UpdateShop from '../UpdateProduct/UpdateProduct'
 import NewShop from '../newProduct/NewProduct'
 import DetailsProduit from '../DetailsProduit/DetailsProduit'
+import { userRequest } from "../../RequestMethod";
 
 const ProductUI = () => {
     const [products, setProducts] = useState([]);
@@ -18,43 +18,42 @@ const ProductUI = () => {
     const [newProduct, setNewProduct] = useState(false);
 
     const getProducts = async () => {
-        let url = "https://server.amiraf.shop/api/product/multiFilter?";
-
+        let url = "/product/multiFilter?";
         const queryParams = [];
-
+    
         if (mois) queryParams.push(`mois=${mois}`);
         if (jour) queryParams.push(`jour=${jour}`);
         if (title) queryParams.push(`title=${title}`);
         if (quantity) queryParams.push(`quantity=${quantity}`);
         if (isInStock !== undefined) queryParams.push(`isInStock=${isInStock}`);
-
+    
         if (queryParams.length > 0) {
             url += queryParams.join('&');
         }
-
+    
         try {
-            const res = await axios.get(url);
+            const res = await userRequest.get(url);
             setProducts(res.data);
         } catch (err) {
-            console.error("Error fetching orders:", err);
+            console.error("Error fetching products:", err);
         }
     };
-
+    
     const formatDate = (dateString) => {
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', options);
     };
-
+    
     const deleteProduct = async (id) => {
         try {
-            const res = await axios.delete(`https://server.amiraf.shop/api/product/${id}`);
+            await userRequest.delete(`/product/${id}`);
             await getProducts();
-        } catch(err){
-            console.log(err)
+        } catch (err) {
+            console.log(err);
         }
     };
-
+    
     useEffect(() => {
         getProducts();
     }, [mois, jour, title, quantity, isInStock]);

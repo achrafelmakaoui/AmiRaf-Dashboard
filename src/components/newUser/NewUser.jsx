@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './NewUser.css'
 import { motion } from "framer-motion"
-import axios from 'axios'
+import { userRequest } from "../../RequestMethod";
 
 const NewUser = ({handleClose , refreshUsers}) => {
     const [nomComplet, setNomComplet] = useState('');
@@ -16,7 +16,7 @@ const NewUser = ({handleClose , refreshUsers}) => {
                 email,
                 password,
             };
-            const response = await axios.post('https://server.amiraf.shop/api/auth/register', formData);
+            const response = await userRequest.post('/auth/register', formData);
             console.log('User added:', response.data);
             refreshUsers();
             handleClose();

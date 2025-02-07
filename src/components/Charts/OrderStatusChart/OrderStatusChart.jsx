@@ -8,8 +8,8 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import { userRequest } from "../../../RequestMethod";
 
-// Register Chart.js components
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const OrderStatusChart = () => {
@@ -19,11 +19,11 @@ const OrderStatusChart = () => {
   });
 
   useEffect(() => {
-    // Fetch data for order status
-    fetch("https://server.amiraf.shop/api/order/status-distribution")
-      .then((response) => response.json())
-      .then((data) => {
-        // Sort the data according to the desired order
+    const fetchData = async () => {
+      try {
+        const response = await userRequest.get("/order/status-distribution");
+        const data = response.data;
+
         const sortedData = [
           { status: "LVR", color: "#2d2e32", count: 0 },
           { status: "RTR", color: "#2d2e32", count: 0 },
@@ -32,8 +32,7 @@ const OrderStatusChart = () => {
           { status: "CNF", color: "#2d2e32", count: 0 },
           { status: "ATT", color: "#2d2e32", count: 0 },
         ];
-        
-        // Fill the counts based on the data received
+
         data.forEach((entry) => {
           const statusIndex = sortedData.findIndex(
             (item) => item.status === entry.status
@@ -43,21 +42,24 @@ const OrderStatusChart = () => {
           }
         });
 
-        // Set the chart data
         setChartData({
-          labels: sortedData.map((item) => item.status), // Sorted labels
+          labels: sortedData.map((item) => item.status),
           datasets: [
             {
               label: "Order Status Distribution",
-              data: sortedData.map((item) => item.count), // Sorted counts
-              backgroundColor: sortedData.map((item) => item.color), // Colors based on status
+              data: sortedData.map((item) => item.count),
+              backgroundColor: sortedData.map((item) => item.color),
               borderColor: "#ffffff",
               borderWidth: 1,
             },
           ],
         });
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const options = {
@@ -89,9 +91,7 @@ const OrderStatusChart = () => {
     },
   };
 
-  return (
-      <Bar data={chartData} options={options} />
-  );
+  return <Bar data={chartData} options={options} />;
 };
 
 export default OrderStatusChart;

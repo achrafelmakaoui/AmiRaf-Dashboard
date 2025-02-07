@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './UpdateOrder.css'
 import { motion } from "framer-motion"
-import axios from 'axios'
+import { userRequest } from "../../RequestMethod";
 
 const UpdateOrder = ({handleClose, orderId, itemId, refreshOrders}) => {
     const [order, setOrder] = useState({});
@@ -16,7 +16,7 @@ const UpdateOrder = ({handleClose, orderId, itemId, refreshOrders}) => {
     useEffect(() => {
         const getOrder = async () => {
           try {
-            const res = await axios.get(`https://server.amiraf.shop/api/order/orders/${orderId}/${itemId}`);
+            const res = await userRequest.get(`/order/orders/${orderId}/${itemId}`);
             setOrder(res.data);
             setOrderItem(res.data.items[0] || {});
           } catch(err){
@@ -38,11 +38,10 @@ const UpdateOrder = ({handleClose, orderId, itemId, refreshOrders}) => {
                 clientVille: ville,
                 clientPhoneNumber: telephone,
             };
-            const response = await axios.put(
-                `https://server.amiraf.shop/api/order/orders/${orderId}/${itemId}`,
+            const response = await userRequest.put(
+                `/order/orders/${orderId}/${itemId}`,
                 updatedOrderData
             );
-            console.log("Order updated:", response.data);
             setOrder(response.data);
             refreshOrders();
             handleClose();

@@ -3,9 +3,9 @@ import './SettingUI.css'
 import SupIcon from '../Assets/sup3d.png'
 import { motion } from "framer-motion"
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios'
 import { logout } from '../redux/userRedux';
 import UpdateUser from '../UpdateUser/UpdateUser'
+import { userRequest } from "../../RequestMethod";
 
 const SettingUI = () => {
   const [DeleteAlert,setDeleteAlert]= useState(false);
@@ -29,9 +29,8 @@ const SettingUI = () => {
   const currentUserId = useSelector((state) => state.user.currentUser._id);
 
   const handleDelete = () => {
-    axios.delete(`https://server.amiraf.shop/api/users/${currentUserId}`)
+    userRequest.delete(`/users/${currentUserId}`)
       .then(response => {
-        console.log(response.data);
         dispatch(logout());
       })
       .catch(error => {
@@ -42,7 +41,7 @@ const SettingUI = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios.get(`https://server.amiraf.shop/api/users/find/${currentUserId}`);
+        const res = await userRequest.get(`/users/find/${currentUserId}`);
         setUser(res.data);
       } catch(err){
           console.log(err)

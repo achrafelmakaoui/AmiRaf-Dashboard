@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { userRequest } from "../../../RequestMethod"; // Import authenticated request instance
 
 const TotalSalesRevenue = () => {
   const [totalSalesRevenue, setTotalSalesRevenue] = useState(0);
 
   useEffect(() => {
-    // Fetch total sales revenue from the backend
-    fetch("https://server.amiraf.shop/api/order/total-sales-revenue")
-      .then((response) => response.json())
-      .then((data) => {
-        setTotalSalesRevenue(data.totalSalesRevenue);
-      })
-      .catch((error) => console.error("Error fetching total sales revenue:", error));
+    const fetchTotalRevenue = async () => {
+      try {
+        const response = await userRequest.get("/order/total-sales-revenue"); // Authenticated request
+        setTotalSalesRevenue(response.data.totalSalesRevenue);
+      } catch (error) {
+        if (error.response?.status === 403) {
+          console.error("Access denied: Admin privileges required.");
+        } else {
+          console.error("Error fetching total sales revenue:", error);
+        }
+      }
+    };
+
+    fetchTotalRevenue();
   }, []);
 
   return (

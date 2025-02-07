@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './UsersUI.css'
-import axios from 'axios'
+import { userRequest } from "../../RequestMethod";
 import NewClient from '../newUser/NewUser'
 
 const UsersUI = () => {
@@ -15,7 +15,7 @@ const UsersUI = () => {
 
     const getUsers = async () => {
         try {
-            const res = await axios.get('https://server.amiraf.shop/api/users/');
+            const res = await userRequest.get('/users/');
             setUsers(res.data);
         } catch (err) {
             console.log(err);
@@ -24,7 +24,7 @@ const UsersUI = () => {
 
     const deleteUser = async (id) => {
         try {
-            const res = await axios.delete(`https://server.amiraf.shop/api/users/${id}`);
+            const res = await userRequest.delete(`/users/${id}`);
             await getUsers();
         } catch (err) {
             console.log(err);

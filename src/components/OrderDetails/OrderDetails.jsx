@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import './OrderDetails.css'
 import { motion } from "framer-motion"
-import axios from 'axios'
+import { userRequest } from "../../RequestMethod";
 
 const OrderDetails = ({handleClose, itemId, orderId}) => {
     const [order, setOrder] = useState({});
     const [orderItem, setOrderItem] = useState({});
 
-
     useEffect(() => {
         const getClient = async () => {
-          try {
-            const res = await axios.get(`https://server.amiraf.shop/api/order/orders/${orderId}/${itemId}`);
-            setOrder(res.data);
-            setOrderItem(res.data.items[0] || {});
-          } catch(err){
-              console.log(err)
-          }
+            try {
+                const res = await userRequest.get(`/order/orders/${orderId}/${itemId}`);
+                setOrder(res.data);
+                setOrderItem(res.data.items[0] || {});
+            } catch (err) {
+                console.log(err);
+            }
         };
         getClient();
-      }, []);
+    }, []);
+
   return (
     <div className='MoreInfoClientDiv'>
         <motion.div

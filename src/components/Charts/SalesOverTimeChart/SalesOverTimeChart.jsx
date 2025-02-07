@@ -1,4 +1,3 @@
-// SalesOverTimeChart.js
 import React, { useEffect, useState } from "react";
 import {
   Chart as ChartJS,
@@ -11,8 +10,8 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import { userRequest } from "../../../RequestMethod"; // Import authenticated request instance
 
-// Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const SalesOverTimeChart = () => {
@@ -22,28 +21,38 @@ const SalesOverTimeChart = () => {
   });
 
   useEffect(() => {
-    // Fetch sales data grouped by day
-    fetch("https://server.amiraf.shop/api/order/sales-over-time")
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await userRequest.get("/order/sales-over-time"); // Use userRequest
+        const data = response.data;
+
         const dates = data.map((entry) => entry.date);
         const sales = data.map((entry) => entry.totalSales);
 
         setChartData({
-          labels: dates, // X-axis: Dates
+          labels: dates,
           datasets: [
             {
               label: "Total Sales",
-              data: sales, // Y-axis: Sales amounts
+              data: sales,
               borderColor: "#2d2e32",
               backgroundColor: "#2d2e32",
               borderWidth: 2,
-              tension: 0.4, // Smooth curves
+              tension: 0.4,
             },
           ],
         });
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+      } catch (error) {
+        if (error.response?.status === 403) {
+          console.error("Access denied: Admin privileges required.");
+          // Handle unauthorized access (e.g., show a message, redirect, etc.)
+        } else {
+          console.error("Error fetching data:", error);
+        }
+      }
+    };
+
+    fetchData();
   }, []);
 
   const options = {
@@ -74,9 +83,7 @@ const SalesOverTimeChart = () => {
     },
   };
 
-  return (
-      <Line data={chartData} options={options} />
-  );
+  return <Line data={chartData} options={options} />;
 };
 
 export default SalesOverTimeChart;

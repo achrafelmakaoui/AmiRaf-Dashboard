@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './UpdateProduct.css'
 import { motion } from "framer-motion"
 import axios from 'axios'
+import { userRequest } from "../../RequestMethod";
 
 const UpdateProduct = ({handleClose,productId ,refreshProducts}) => {
     const [product, setProduct] = useState({});
@@ -38,8 +39,7 @@ const UpdateProduct = ({handleClose,productId ,refreshProducts}) => {
                 quantity:quantity,
             };
     
-            const response = await axios.put(`https://server.amiraf.shop/api/product/${product._id}`, updatedProductData);
-            console.log('Shop updated:', response.data);
+            const response = await userRequest.put(`/product/${product._id}`, updatedProductData);
     
             setProduct(response.data);
             refreshProducts();

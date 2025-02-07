@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion"
 import './NewProduct.css'
-import axios from 'axios';
+import { userRequest } from "../../RequestMethod";
 
 function NewProduct({handleClose, refreshProducts}) {
     const [title, setTitle] = useState();
@@ -35,10 +35,9 @@ function NewProduct({handleClose, refreshProducts}) {
         formData.append('image6', image6);
 
         try {
-            const response = await axios.post('https://server.amiraf.shop/api/product/add-product', formData, {
+            const response = await userRequest.post('/product/add-product', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
-            console.log(response.data);
             refreshProducts();
             handleClose();
         } catch (error) {

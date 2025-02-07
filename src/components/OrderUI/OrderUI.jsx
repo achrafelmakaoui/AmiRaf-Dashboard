@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './OrderUI.css'
-import axios from 'axios'
 import UpdateTransaction from '../UpdateOrder/UpdateOrder'
 import MoreInfoClient from '../OrderDetails/OrderDetails'
+import { userRequest } from "../../RequestMethod";
 
 const OrderUI = () => {
     const [orders, setOrders] = useState([]);
@@ -17,45 +17,45 @@ const OrderUI = () => {
     const [itemId, setItemId] = useState();
 
     const getOrders = async () => {
-        let url = "https://server.amiraf.shop/api/order/orders/filter?";
+        let url = "/order/orders/filter?";
         
         const queryParams = [];
-
+    
         if (mois) queryParams.push(`mois=${mois}`);
         if (jour) queryParams.push(`jour=${jour}`);
         if (clientPhoneNumber) queryParams.push(`clientPhoneNumber=${clientPhoneNumber}`);
         if (productId) queryParams.push(`productId=${productId}`);
         if (status) queryParams.push(`status=${status}`);
-
+    
         if (queryParams.length > 0) {
             url += queryParams.join('&');
         } else {
-            url = "https://server.amiraf.shop/api/order/orders/filter";
+            url = "/order/orders/filter";
         }
-
+    
         try {
-            const res = await axios.get(url);
+            const res = await userRequest.get(url);
             setOrders(res.data.orders);
         } catch (err) {
             console.error("Error fetching orders:", err);
         }
     };
-
+    
     const formatDate = (dateString) => {
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', options);
     };
-
+    
     const deleteOrder = async ({ itemId, orderId }) => {
         try {
-          const res = await axios.delete(`https://server.amiraf.shop/api/order/orders/${orderId}/${itemId}`);
-          console.log(res);
-          await getOrders();
-        } catch(err){
-            console.log(err)
+            const res = await userRequest.delete(`/order/orders/${orderId}/${itemId}`);
+            await getOrders();
+        } catch (err) {
+            console.log(err);
         }
     };
+    
     useEffect(() => {
         getOrders();
     }, [mois, jour, clientPhoneNumber, productId, status]);

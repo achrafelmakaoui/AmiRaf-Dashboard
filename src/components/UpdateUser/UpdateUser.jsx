@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './UpdateUser.css'
 import { motion } from "framer-motion"
-import axios from 'axios'
+import { userRequest } from "../../RequestMethod";
 import { useSelector } from 'react-redux';
 
 const UpdateTransaction = ({handleClose, userId}) => {
@@ -16,7 +16,7 @@ const UpdateTransaction = ({handleClose, userId}) => {
     useEffect(() => {
         const getUser = async () => {
           try {
-            const res = await axios.get(`https://server.amiraf.shop/api/users/find/${userId}`);
+            const res = await userRequest.get(`/users/find/${userId}`);
             setUser(res.data);
           } catch(err){
               console.log(err)
@@ -38,8 +38,7 @@ const UpdateTransaction = ({handleClose, userId}) => {
                 };
             }
 
-            const response = await axios.put(`https://server.amiraf.shop/api/users/${user._id}`, updatedUserData);
-            console.log('User Info updated:', response.data);
+            const response = await userRequest.put(`/users/${user._id}`, updatedUserData);
 
             setUser(response.data);
             handleClose();
